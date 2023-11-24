@@ -1,5 +1,14 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (2DGameEngine.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
   AComponent.cpp
   Application.cpp
+  CircleComponent.cpp
+  Entity.cpp
+  ResourceManager.cpp
+D:\THOMAS\Ynov\C++\2DGameEngine\GameEngine\ResourceManager.cpp(6,52): error C2440: 'initialisation' : impossible de convertir de 'bool' en 'sf::Texture *'
+D:\THOMAS\Ynov\C++\2DGameEngine\GameEngine\ResourceManager.cpp(6,23): message : La conversion d'un type intégral en un type pointeur nécessite un reinterpret_cast, un cast de style C ou un cast de style fonction entre parenthèses.
+D:\THOMAS\Ynov\C++\2DGameEngine\GameEngine\ResourceManager.cpp(8,27): warning C4552: '-' : résultat de l'expression non utilisé
+D:\THOMAS\Ynov\C++\2DGameEngine\GameEngine\ResourceManager.cpp(9,2): error C2562: 'GE::ResourceManager::getTexture' : fonction 'void' retournant une valeur
+D:\THOMAS\Ynov\C++\2DGameEngine\GameEngine\ResourceManager.cpp(4): message : voir la déclaration de 'GE::ResourceManager::getTexture'
+  SpriteComponent.cpp
+  SpriteRenderer.cpp
   Génération de code en cours...
-  GameEngine.vcxproj -> D:\THOMAS\Ynov\C++\2DGameEngine\x64\Debug\GameEngine.lib

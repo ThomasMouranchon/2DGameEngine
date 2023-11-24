@@ -5,22 +5,21 @@ GE::AComponent::AComponent()
 {
 }
 
-void GE::AComponent::Awake()
+/*void GE::AComponent::Awake()
 {
 }
 
 void GE::AComponent::Start()
 {
-}
+}*/
 
-void GE::AComponent::Update()
+/*void GE::AComponent::Update(sf::RenderTarget& target)
 {
-	sf::RenderWindow window;
-		sf::CircleShape shape(100.f);
-		shape.setFillColor(sf::Color::Green);
-		shape.setPosition(10, 10);
-		window.draw(shape);
-}
+	sf::CircleShape shape(100.f);
+	shape.setFillColor(sf::Color::Green);
+	shape.setPosition(10, 10);
+	target.draw(shape);
+}*/
 
 void GE::AComponent::FixedUpdate()
 {

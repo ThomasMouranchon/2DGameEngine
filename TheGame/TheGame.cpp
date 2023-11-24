@@ -1,20 +1,44 @@
 // TheGame.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
 #include <iostream>
+#include <yaml-cpp/yaml.h>
+#include <filesystem>
+#include <list>
+#include <vector>
 
 #include <SFML/Graphics.hpp>
 #include <GameEngine/Application.h>
+#include <GameEngine/CircleComponent.h>
+#include <GameEngine/SpriteComponent.h>
+#include <GameEngine/ResourceManager.h>
+
+namespace fs = std::filesystem;
 
 int main()
 {
     GE::Application app;
    // sf::RenderWindow window(sf::VideoMode(1920, 1080), "SFML works!");
     app.Init(1920, 1080, "The Game");
-    sf::CircleShape shape(100.f);
+    
+    GE::ResourceManager resourceManager;
+    for (const auto& entry : fs::directory_iterator("../Sprites"))
+    {
+        resourceManager.getTexture(entry.path().filename().string());
+        //resourceManager.listTexture.push_back(entry.path().filename().string());
+        //fs::directory_iterator("D:\\THOMAS\\Ynov\\C++\\2DGameEngine\\Sprites");
+        //fs::directory_iterator("../2DGameEngine/Sprites");
+        //resourceManager.getTexture();
+    }
+    /*sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
     shape.setPosition(10, 500);
     sf::RectangleShape shape2(sf::Vector2f(120, 50));
-    shape2.setFillColor(sf::Color::Red);
+    shape2.setFillColor(sf::Color::Red);*/
+
+    GE::Entity* ent1 = app.CreateEntity("background");
+    ent1->CreateComponent<GE::SpriteComponent>("test");// <GE::SpriteRenderer>("Background");
+    ent1->setPosition(100, 100);
+    //app.listEntity[0]->CreateAComponent<GE::SpriteRenderer>("Background");
     //shape2.transform;
     /*
     while (window.isOpen())

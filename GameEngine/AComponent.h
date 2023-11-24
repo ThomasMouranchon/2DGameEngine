@@ -10,15 +10,15 @@ namespace GE {
 	public:
 		AComponent();
 
-		virtual void Awake() = 0;
-		virtual void Start() = 0;
-		//virtual void Update(float deltaTime) = 0;
-		virtual void Update();
+		//virtual void Awake() = 0;
+		//virtual void Start() = 0;
+		virtual void Update(float deltaTime) = 0;
+		//virtual void Update(sf::RenderTarget& target);
 		virtual void FixedUpdate();
-		virtual void LateUpdate(float deltaTime) = 0;
+		//virtual void LateUpdate(float deltaTime) = 0;
 		virtual float OnCollisionEnter();
 
-		bool isVisible = true;
+		//bool isVisible = true;
 
 		//std::string;
 	};

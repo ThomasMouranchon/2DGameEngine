@@ -2,7 +2,7 @@
 
 #include "Application.h"
 #include "Entity.h"
-#include<list>
+#include <list>
 
 GE::Application* GE::Application::instance;
 
@@ -36,13 +36,17 @@ void GE::Application::Update()
         }
 
         window.clear();
-		sf::CircleShape shape(100.f);
+		/*sf::CircleShape shape(100.f);
 		shape.setFillColor(sf::Color::Green);
 		shape.setPosition(10, 10);
-		window.draw(shape);
+		window.draw(shape);*/
 		for (int i = 0; i < listEntity.size(); i++)
 		{
-			listEntity[i]->Update();
+			listEntity[i]->Update(1);
+		}
+		for (int i = 0; i < listEntity.size(); i++)
+		{
+			window.draw(*listEntity[i]);
 		}
         /*window.draw(shape);
         window.draw(shape2);*/
