@@ -10,7 +10,7 @@
 #include <GameEngine/Application.h>
 #include <GameEngine/CircleComponent.h>
 #include <GameEngine/SpriteComponent.h>
-#include <GameEngine/ResourceManager.h>
+//#include <GameEngine/ResourceManager.h>
 
 namespace fs = std::filesystem;
 
@@ -20,15 +20,15 @@ int main()
    // sf::RenderWindow window(sf::VideoMode(1920, 1080), "SFML works!");
     app.Init(1920, 1080, "The Game");
     
-    GE::ResourceManager resourceManager;
-    for (const auto& entry : fs::directory_iterator("../Sprites"))
+    //GE::ResourceManager resourceManager;
+    /*for (const auto& entry : fs::directory_iterator("../Sprites"))
     {
         resourceManager.getTexture(entry.path().filename().string());
         //resourceManager.listTexture.push_back(entry.path().filename().string());
         //fs::directory_iterator("D:\\THOMAS\\Ynov\\C++\\2DGameEngine\\Sprites");
         //fs::directory_iterator("../2DGameEngine/Sprites");
         //resourceManager.getTexture();
-    }
+    }*/
     /*sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
     shape.setPosition(10, 500);
@@ -36,8 +36,18 @@ int main()
     shape2.setFillColor(sf::Color::Red);*/
 
     GE::Entity* ent1 = app.CreateEntity("background");
-    ent1->CreateComponent<GE::SpriteComponent>("test");// <GE::SpriteRenderer>("Background");
+    GE::SpriteComponent* sprite;
+    sprite = ent1->CreateComponent<GE::SpriteComponent>();// <GE::SpriteRenderer>("Background");
+    sprite->loadSpriteByAssetId("tower");
     ent1->setPosition(100, 100);
+
+
+    GE::Entity* ent2 = app.CreateEntity("background2");
+    GE::SpriteComponent* sprite2;
+    sprite2 = ent2->CreateComponent<GE::SpriteComponent>();// <GE::SpriteRenderer>("Background");
+    sprite2->loadSpriteByAssetId("tower2");
+    ent2->setPosition(500, 500);
+
     //app.listEntity[0]->CreateAComponent<GE::SpriteRenderer>("Background");
     //shape2.transform;
     /*

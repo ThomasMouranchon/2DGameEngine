@@ -14,12 +14,17 @@ namespace GE
 		SpriteComponent();
 
 		// Hérité via AComponent
-		virtual void Update(float deltaTime) override;
+		virtual void Start() override;
 
+		// Hérité via AComponent
+		virtual void Update(float deltaTime) override;
 
 		// Hérité via Drawable
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
-    };
+		virtual void loadSprite(std::string path);
+
+		virtual void loadSpriteByAssetId(std::string id);
+	};
 
 }

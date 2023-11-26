@@ -11,18 +11,11 @@ GE::Application::Application()
 	//listEntity entityList = new listEntity<>;
 	//std::list<Entity> entityList;
 	instance = this;
-
-	CreateEntity("testEntity");
 }
 
 /*GE::Application::~Application()
 {
 }*/
-
-void GE::Application::Loop(sf::Time t)
-{
-
-}
 
 void GE::Application::Update()
 {
@@ -54,11 +47,6 @@ void GE::Application::Update()
     }
 }
 
-void GE::Application::Run()
-{
-
-}
-
 void GE::Application::Init(int windowSizeX, int windowSizeY, std::string windowName)
 {
 	window.create(sf::VideoMode(windowSizeX, windowSizeY), windowName);
@@ -71,10 +59,28 @@ GE::Entity* GE::Application::CreateEntity(std::string name)
 	return entityName;
 }
 
-GE::Entity* GE::Application::GetEntity(Entity* name)
+GE::Entity* GE::Application::AddEntityToList(Entity* name)
 {
 	listEntity.push_back(name);
 	return name;
+}
+
+GE::Entity* GE::Application::GetParentEntity(AComponent* name)
+{
+	for (int i = 0; i < listEntity.size(); i++)
+	{
+		for (int j = 0; j < listEntity[i]->listComponent.size(); j++)
+		{
+			if (listEntity[i]->listComponent[j] == name)
+			{
+				return listEntity[i];
+			}
+		}
+	}
+
+	return nullptr;
+	/*listEntity.push_back(name);
+	return name;*/
 }
 
 GE::Application* GE::Application::GetInstance()

@@ -6,6 +6,10 @@ GE::CircleComponent::CircleComponent() : shape(200)
 	shape.setPosition(10, 10);
 }
 
+void GE::CircleComponent::Start()
+{
+}
+
 void GE::CircleComponent::Update(float deltaTime)
 {
 }

@@ -19,6 +19,10 @@ namespace GE
 		// Hérité via Drawable
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
+
+		// Hérité via AComponent
+		virtual void Start() override;
+
 	};
 
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include "ResourceManager.h"
 
 namespace GE {
 	class Application
@@ -8,16 +9,17 @@ namespace GE {
 
         std::vector<Entity*> listEntity;
         sf::RenderWindow window;
+        ResourceManager resourceManager;
         static GE::Application* instance;
 
         Application();
         //~Application();
 
-        void Loop(sf::Time t);
         void Update();
-        void Run();
         Entity* CreateEntity(std::string name);
-        Entity* GetEntity(Entity*);
+        Entity* AddEntityToList(Entity*);
+
+        Entity* GetParentEntity(AComponent*);
 
         static Application* GetInstance();
 

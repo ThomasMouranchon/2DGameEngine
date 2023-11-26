@@ -1,21 +1,20 @@
 #pragma once
-#include <iostream>
-
-#include "Application.h"
-#include "AComponent.h"
-#include "Entity.h"
+#include <map>
+#include <string>
 
 namespace GE
 {
 	class ResourceManager
 	{
 	public:
-		std::vector<sf::Texture*> listTexture;
+		ResourceManager();
+
+		std::map < std::string, std::string > assetsMap;
+		
+		std::string GetPathByID(std::string);
+		
 		//TCHAR buffer[MAX_PATH];
 		//std::string GetModuleFileName(NULL, buffer, sizeof(buffer));
-
-		//sf::Texture* getTexture(sf::Texture* texture);
-		void getTexture(std::string name);
 
 
 	};

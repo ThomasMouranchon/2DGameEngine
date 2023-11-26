@@ -5,14 +5,12 @@
 #include "CircleComponent.h"
 #include "SpriteComponent.h"
 
-void GE::Entity::Awake()
-{
-
-}
-
 void GE::Entity::Start()
 {
-
+	for (int i = 0; i < listComponent.size(); i++)
+	{
+		listComponent[i]->Start();
+	}
 }
 
 void GE::Entity::Update(float deltaTime)
@@ -23,24 +21,7 @@ void GE::Entity::Update(float deltaTime)
 	}
 }
 
-void GE::Entity::FixedUpdate(float deltaTime)
-{
-	/*for (int i = 0; i < listComponent.size(); i++)
-	{
-		listComponent[i]->Update();
-	}*/
-}
-
-void GE::Entity::LateUpdate(float deltaTime)
-{
-	/*for (int i = 0; i < listComponent.size(); i++)
-	{
-		listComponent[i]->Update();
-	}*/
-}
-
-
-GE::AComponent* GE::Entity::GetComponent(AComponent* component)
+GE::AComponent* GE::Entity::AddComponentToList(AComponent* component)
 {
 	listComponent.push_back(component);
 	return component;
@@ -56,14 +37,4 @@ void GE::Entity::draw(sf::RenderTarget& target, sf::RenderStates states)const
 			target.draw(*drawable, states);
 		}
 	}
-}
-
-std::string GetID(std::string name)
-{
-	return name;
-}
-
-std::string GetName(std::string name)
-{
-	return name;
 }
