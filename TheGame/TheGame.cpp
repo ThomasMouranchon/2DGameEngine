@@ -8,6 +8,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <GameEngine/Application.h>
+#include <GameEngine/Camera.h>
 #include <GameEngine/CircleComponent.h>
 #include <GameEngine/SpriteComponent.h>
 //#include <GameEngine/ResourceManager.h>

@@ -22,9 +22,4 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Sprites\ShrekFace.png">
-      <Filter>Sprites</Filter>
-    </Image>
-  </ItemGroup>
 </Project>
