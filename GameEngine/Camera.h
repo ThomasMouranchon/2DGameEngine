@@ -7,8 +7,9 @@ namespace GE
 	class Camera
 	{
 	public:
-		sf::RenderWindow* window;
-		sf::View view = window.getView();
-		window.setView(view);
+		sf::RenderWindow* appWindow;
+
+		void Init(sf::RenderWindow* window);
+
 	};
 }
