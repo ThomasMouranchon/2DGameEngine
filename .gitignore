@@ -1,5 +1,2 @@
-# Ignore everything in the sprites directory
-sprites/*
-
-# Except for this file
-!sprites/README.md
+Sprites/*
+!Sprites/README.md
