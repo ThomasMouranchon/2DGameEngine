@@ -33,6 +33,7 @@ void GE::Application::Update()
 		shape.setFillColor(sf::Color::Green);
 		shape.setPosition(10, 10);
 		window.draw(shape);*/
+		camera->Update(&window);
 		for (int i = 0; i < listEntity.size(); i++)
 		{
 			listEntity[i]->Update(1);

@@ -1,6 +1,7 @@
 #pragma once
 #include "Entity.h"
 #include "ResourceManager.h"
+#include "Camera.h"
 
 namespace GE {
 	class Application
@@ -11,6 +12,7 @@ namespace GE {
         sf::RenderWindow window;
         ResourceManager resourceManager;
         static GE::Application* instance;
+        GE::Camera* camera;
 
         Application();
         //~Application();

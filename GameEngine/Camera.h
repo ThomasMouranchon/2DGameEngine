@@ -8,8 +8,10 @@ namespace GE
 	{
 	public:
 		sf::RenderWindow* appWindow;
+		sf::View view;
 
 		void Init(sf::RenderWindow* window);
+		void Update(sf::RenderWindow* window);
 
 	};
 }
