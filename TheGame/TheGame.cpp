@@ -18,8 +18,10 @@ namespace fs = std::filesystem;
 int main()
 {
     GE::Application app;
+    GE::Camera camera;
    // sf::RenderWindow window(sf::VideoMode(1920, 1080), "SFML works!");
     app.Init(1920, 1080, "The Game");
+    camera.Init(&app.window);
     
     //GE::ResourceManager resourceManager;
     /*for (const auto& entry : fs::directory_iterator("../Sprites"))
