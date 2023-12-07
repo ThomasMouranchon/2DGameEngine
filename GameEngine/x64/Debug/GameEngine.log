@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (2DGameEngine.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
-  Camera.cpp
-  GameEngine.vcxproj -> D:\THOMAS\Ynov\C++\2DGameEngine\x64\Debug\GameEngine.lib
-=======
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (2DGameEngine.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
-  Camera.cpp
-  GameEngine.vcxproj -> D:\THOMAS\Ynov\C++\2DGameEngine\x64\Debug\GameEngine.lib
->>>>>>> ece8dfd8cb0370c2c1d5fb89e05a080a630b6b49
