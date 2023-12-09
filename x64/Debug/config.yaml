@@ -1,0 +1,6 @@
+config:
+  assets:
+    - id: tower
+      path: "sprites\\Tower.png"
+    - id: tower2
+      path: "sprites\\Tower2.png"
